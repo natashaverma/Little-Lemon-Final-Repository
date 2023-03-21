@@ -5,7 +5,9 @@ const Header = () => {
     return (
         <header>
             <div className="left-side">
-                <h1>Little Lemon</h1>
+                <h1 data-testid="homepage-title">
+                    Little Lemon
+                </h1>
                 <h2>Chicago</h2>
                 <p>
                     We are a family owned Mediterranean restaurant, focused on traditional
