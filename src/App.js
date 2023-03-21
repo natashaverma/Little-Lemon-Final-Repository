@@ -12,22 +12,28 @@ function App() {
 
   const [form, setForm] = useState({
     name: "",
-    guests: "",
+    guests: 1,
     date: "",
     time: "",
     phone: "",
-    comments: "",
     disabled: "",
   });
   const navigate = useNavigate();
 
   const onChange = (e) => {
-    const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
+    // const { name, value } = e.target;
+    const name = e.target.name;
+    const value = e.target.value;
+    setForm((prevForm) => ({
+      ...prevForm,
+      [name]: value
+    }))
+    console.log(form);
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
+    // console.log(form);
     navigate("/Booking-confirmed");
   };
 

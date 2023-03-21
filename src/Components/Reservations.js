@@ -45,7 +45,7 @@ function Reservations(props) {
     };
 
     const isDisabled = () => {
-        if (form.name && form.guests && form.date && form.time && form.phone) {
+        if (form.name && form.guests && form.date && form.time) {
             return false;
         } else {
             return true;
@@ -55,6 +55,67 @@ function Reservations(props) {
     return (
         <>
             <h1>Hi</h1>
+            <div className="res-container">
+                <h1 className="res-title">Reserve your Table</h1>
+                <form className="form-container" onSubmit={handleSubmit}>
+                    <div>
+                        <label htmlFor="name">Your Name</label>
+                        <input
+                            className="forminput"
+                            id="name"
+                            name="name"
+                            type="text"
+                            placeholder="Your Name"
+                            value={form.name}
+                            onChange={onChange}
+                            required
+                        />
+                    </div>
+
+                    <div id="guests-input">
+                        <label className="guests-title" htmlFor="guests">
+                            How Many Guests?
+                        </label>
+                        <input type="number" placeholder="1" min="1" max="10" id="guests" name="guests" value={form.guests} onChange={onChange} required />
+                    </div>
+                    <div id="date-time">
+                        <div>
+                            <label htmlFor="date">Date</label>
+                            <input
+                                name="date"
+                                type="date"
+                                value={form.date}
+                                onChange={onChange}
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="time">Which Time?</label>
+                            <select name="time" onChange={onChange}>
+                                <option key="default" defaultValue="">
+                                    Pick a time
+                                </option>
+                                {form.date !== "" ? (
+                                    initializeTimes()
+                                ) : (
+                                    <option key="select-date-first" defaultValue="">
+                                        Set date first
+                                    </option>
+                                )}
+                            </select>
+                        </div>
+                    </div>
+                    <button
+                        aria-label="On Click"
+                        data-testid="submitbutton"
+                        disabled={isDisabled()}
+                        id="submit"
+                        type="submit"
+                    >
+                        Send
+                    </button>
+                </form>
+            </div>
         </>
     )
 }
