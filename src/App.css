@@ -83,11 +83,10 @@ header {
   height: 400px;
 }
 
-.left-side,
-.right-side {
-  width: 50%;
+.left-side, .right-side {
+  display: flex;
+  flex-direction: column;
 }
-
 
 /* Card */
 
@@ -182,4 +181,107 @@ header {
   align-items: center;
   background-color: #f4ce14;
   border-radius: 16px;
+}
+
+
+/* Testimonial */
+.t-card-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 200px;
+  height: 200px;
+  margin: 0 2%;
+  padding: 2%;
+  grid-template-areas:
+    "rt rt . . ."
+    "r r n n n"
+    ". tr tr tr .";
+  background-color: #edefee;
+  border-radius: 16px;
+}
+
+.rating-title {
+  grid-area: rt;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.rating {
+  grid-area: r;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  background-color: #f4ce14;
+  border-radius: 16px;
+  box-shadow: 2px 2px #caac12;
+}
+
+.t-name {
+  grid-area: n;
+  padding: 20px 0 0 10px;
+}
+
+.t-review {
+  grid-area: tr;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.testimonials-title {
+  text-align: center;
+  font-size: 64px;
+}
+
+
+/* Main */
+
+.container {
+  display: grid;
+}
+
+section {
+  padding: 3% 0;
+}
+
+.hero-button {
+  height: 50px;
+  width: 200px;
+  margin-top: 5%;
+  font-size: 20px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4ce14;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+/* Navigation bar */
+
+.navbar {
+    display: grid;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 2fr 7fr;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bolder;
+  padding-left: 15%;
 }

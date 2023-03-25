@@ -1,5 +1,5 @@
 import React from "react";
-import Food from '../assets/Logo.svg';
+import Food from '../assets/restauranfood.jpg';
 import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
@@ -18,13 +18,15 @@ const Header = () => {
                 </p>
             </div>
             <div className="right-side">
-                <img
-                    src={Food}
-                    alt="our cook holding a tablet with delicoues baguettes"
-                />
-            </div>
-            <div onClick={() => navigate("/reservations")} className="hero-button">
-                <h4 data-testid="reserve-button">Reserve a Table</h4>
+                {/* <div className="hero-image">
+                    <img
+                        src={Food}
+                        alt="our cook holding a tablet with delicoues baguettes"
+                    />
+                </div> */}
+                <div onClick={() => navigate("/reservations")} className="hero-button">
+                    <h4 data-testid="reserve-button">Reserve a Table</h4>
+                </div>
             </div>
         </header>
     )
