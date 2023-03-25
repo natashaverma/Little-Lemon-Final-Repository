@@ -41,14 +41,14 @@
 /* FOOTER */
 
 footer {
-  display: flex;
-  gap: 20px;
-  padding: 0px 100px;
+  display: grid;
+  margin: auto;
+  padding: 2% 10%;
   background-color: #333333;
   color: white;
   bottom: 0;
   width: 100%;
-  position: fixed;
+  /* position: fixed; */
 
 }
 
@@ -86,4 +86,100 @@ header {
 .left-side,
 .right-side {
   width: 50%;
+}
+
+
+/* Card */
+
+.card-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr 2fr 1fr;
+  grid-template-areas:
+    "card-image card-image"
+    "card-title card-price"
+    "card-description card-description"
+    "card-link .";
+
+  width: 350px;
+  height: 100%;
+  border-radius: 16px;
+  background-color: #edefee;
+  color: #333333;
+}
+
+.card-image {
+  grid-area: card-image;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 16px 16px 0 0;
+}
+
+.card-title {
+  grid-area: card-title;
+  font-size: 18px;
+  font-weight: bolder;
+  padding: 10px 0 0 10px;
+}
+
+.card-description {
+  grid-area: card-description;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.card-price {
+  grid-area: card-price;
+  padding: 10px;
+  color: #ee9972;
+}
+
+.card-link {
+  grid-area: card-link;
+  padding-left: 10px;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+
+/* Highlight section */
+
+.highlight-container {
+  height: 100%;
+  display: grid;
+  /* grid-template-rows: 1fr 5fr; */
+  padding: 0 10%;
+}
+
+.highlight-left {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.highlight-left div {
+  width: 200px;
+  height: 75px;
+}
+
+.highlight-card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.highlight-title {
+  font-size: 64px;
+}
+
+.highlight-button {
+  height: 50px;
+  width: 175px;
+  margin-top: 5%;
+  font-size: 20px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4ce14;
+  border-radius: 16px;
 }

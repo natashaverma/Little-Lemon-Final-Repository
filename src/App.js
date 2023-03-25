@@ -40,7 +40,6 @@ function App() {
     <>
       <div>
         <Nav></Nav>
-        <Footer />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/reservation" element={< Reservations
@@ -50,6 +49,7 @@ function App() {
             onSubmit={onSubmit} />} />
           <Route path="/Booking-confirmed" element={<BookingConfirmation />} />
         </Routes>
+        <Footer />
       </div>
     </>
   );
