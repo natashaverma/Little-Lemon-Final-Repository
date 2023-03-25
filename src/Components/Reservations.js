@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import "./Reservations.css";
 
 function Reservations(props) {
     const { form, onChange, onSubmit } = props;
@@ -54,7 +55,6 @@ function Reservations(props) {
 
     return (
         <>
-            <h1>Hi</h1>
             <div className="res-container">
                 <h1 className="res-title">Reserve your Table</h1>
                 <form className="form-container" onSubmit={handleSubmit}>
