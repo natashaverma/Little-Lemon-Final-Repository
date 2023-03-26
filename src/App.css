@@ -266,22 +266,3 @@ section {
   border-radius: 16px;
   cursor: pointer;
 }
-
-/* Navigation bar */
-
-.navbar {
-    display: grid;
-    width: 80%;
-    margin: auto;
-    align-items: center;
-    justify-items: center;
-    grid-template-columns: 2fr 7fr;
-}
-
-.nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  font-weight: bolder;
-  padding-left: 15%;
-}

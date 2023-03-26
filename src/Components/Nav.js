@@ -1,18 +1,19 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import Logo from '../assets/Logo.svg';
+import "./Nav.css";
 
 function NavBar() {
     return (
         <div className="navbar">
-            <nav className="nav">
+            <nav className="nav-items">
                 <img src={Logo} alt="Little Lemon Logo" />
-                {/* <Link to="/">Home</Link>
+                <Link to="/">Home</Link>
                 <a href="#about">About</a>
                 <a href="#menu">Menu</a>
                 <Link to="/reservation">Reservations</Link>
-                <a href="#order-online">Order Online</a> */}
-                <ul>
+                <a href="#order-online">Order Online</a>
+                {/* <ul>
                     <li>
                         <Link to="/">Home</Link>
                     </li>
@@ -31,7 +32,7 @@ function NavBar() {
                     <li>
                         <a href="#login">Login</a>
                     </li>
-                </ul>
+                </ul> */}
             </nav >
         </div>
     );

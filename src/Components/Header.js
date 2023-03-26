@@ -24,7 +24,7 @@ const Header = () => {
                         alt="our cook holding a tablet with delicoues baguettes"
                     />
                 </div> */}
-                <div onClick={() => navigate("/reservations")} className="hero-button">
+                <div onClick={() => navigate("/reservation")} className="hero-button">
                     <h4 data-testid="reserve-button">Reserve a Table</h4>
                 </div>
             </div>

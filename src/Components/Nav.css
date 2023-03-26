@@ -1,0 +1,17 @@
+/* Navigation bar */
+.navbar{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 2fr 7fr;
+  }
+  
+  .nav-items {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+    padding-left: 15%;
+  }
