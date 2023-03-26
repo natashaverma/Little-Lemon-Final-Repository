@@ -16,16 +16,16 @@ const Header = () => {
                     We are a family owned Mediterranean restaurant, focused on traditional
                     recipes served with a modern twist.
                 </p>
+                <div onClick={() => navigate("/reservation")} className="hero-button">
+                    <h4 data-testid="reserve-button">Reserve a Table</h4>
+                </div>
             </div>
             <div className="right-side">
-                {/* <div className="hero-image">
+                <div className="hero-image">
                     <img
                         src={Food}
                         alt="our cook holding a tablet with delicoues baguettes"
                     />
-                </div> */}
-                <div onClick={() => navigate("/reservation")} className="hero-button">
-                    <h4 data-testid="reserve-button">Reserve a Table</h4>
                 </div>
             </div>
         </header>

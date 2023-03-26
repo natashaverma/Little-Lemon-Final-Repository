@@ -266,3 +266,12 @@ section {
   border-radius: 16px;
   cursor: pointer;
 }
+
+.hero-image img{
+  height: 500px;
+  width: 400px;
+  margin-left: auto;
+  background-size: cover;
+  background-position: 0 50%;
+  border-radius: 16px;
+}
