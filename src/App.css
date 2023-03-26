@@ -90,12 +90,11 @@ header {
 
 /* Card */
 
-.card-container {
+.section-card-container {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 2fr;
   grid-template-areas:
-    "card-image card-image"
     "card-title card-price"
     "card-description card-description"
     "card-link .";
@@ -141,7 +140,6 @@ header {
   font-size: 18px;
 }
 
-
 /* Highlight section */
 
 .highlight-container {
@@ -185,7 +183,7 @@ header {
 
 
 /* Testimonial */
-.t-card-container {
+.card-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -219,12 +217,12 @@ header {
   box-shadow: 2px 2px #caac12;
 }
 
-.t-name {
+.name {
   grid-area: n;
   padding: 20px 0 0 10px;
 }
 
-.t-review {
+.review {
   grid-area: tr;
   padding-top: 40px;
   text-align: center;
@@ -241,7 +239,6 @@ header {
   text-align: center;
   font-size: 64px;
 }
-
 
 /* Main */
 

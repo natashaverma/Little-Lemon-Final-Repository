@@ -2,7 +2,7 @@ import React from "react";
 
 function Card() {
     return (
-        <article className="card-container">
+        <article className="section-card-container">
             <h3 className="card-title">Lemon Meringue Pie</h3>
             <div className="card-price">$4.99</div>
             <p className="card-description">

@@ -24,7 +24,7 @@ const Header = () => {
                 <div className="hero-image">
                     <img
                         src={Food}
-                        alt="our cook holding a tablet with delicoues baguettes"
+                        alt="restaurant image"
                     />
                 </div>
             </div>
